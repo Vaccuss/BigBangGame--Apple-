@@ -12,7 +12,7 @@ class GameHub: NSObject {
     
     struct Constants{
         internal static var playerName = ""
-      internal var win  = 0
+        internal static var win  = 0
         internal static var loss = 0
         internal static var tie = 0
         
@@ -30,8 +30,10 @@ class GameHub: NSObject {
         static let LOWESTNUM = 1
         static let HIGHESTNUM = 5
         
-        internal static var statergy =  RockComparisonStrategy()
+        internal static var RESULT = NO_SELECTION
+        internal static var statergy = 0
         internal static var userChoice = NO_SELECTION
+        internal static var AIChoice = NO_SELECTION
        
     }
     
@@ -42,11 +44,90 @@ class GameHub: NSObject {
         return Static.instance
     }
     
-    //class let sharedInstance = GameHub()
-
     override init(){
         
     }
+    
+    internal func setUserChoice(NewUserChoice: Int){
+        Constants.userChoice = NewUserChoice
+        switch (NewUserChoice){
+        case 1:
+            Constants.statergy = Constants.ROCK
+            break
+        case 2:
+            Constants.statergy = Constants.PAPER
+            break
+        case 3:
+            Constants.statergy = Constants.SICSSOR
+            break
+        case 4:
+            Constants.statergy = Constants.LIZARD
+            break
+        case 5:
+            Constants.statergy = Constants.SPOCK
+            break
+         default:
+            Constants.statergy = Constants.NO_SELECTION
+        }
+    }
+    
+    internal func compares(){
+        var guess = AiGuess()
+        switch (Constants.userChoice){
+        case Constants.ROCK:
+            Constants.RESULT = RockComparisonStrategy().compare(guess)
+            break
+        case Constants.PAPER:
+            Constants.RESULT = PaperComparisonStrategy().compare(guess)
+            break
+        case Constants.SICSSOR:
+            Constants.RESULT = SicssorsComparisonStrategy().compare(guess)
+            break
+        case Constants.LIZARD:
+            Constants.RESULT = LizardComparisonStrategy().compare(guess)
+            break
+        case Constants.SPOCK:
+            Constants.RESULT = SpockComparisonStrategy().compare(guess)
+            break
+         default:
+            break
+        }
+    }
+    
+    internal func AiGuess() -> Int{
+        var temp = Int(arc4random_uniform(5))
+        var AiRandom = temp
+        var Choice = Constants.NO_SELECTION
+        
+        switch (AiRandom){
+        case 0:
+            Choice = Constants.ROCK
+            
+        case 1:
+            Choice = Constants.PAPER
+            
+        case 2:
+            Choice = Constants.SICSSOR
+            
+        case 3:
+            Choice = Constants.LIZARD
+            
+        case 4:
+            Choice = Constants.SPOCK
+           
+        default:
+            break
+        }
+        return Choice
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }

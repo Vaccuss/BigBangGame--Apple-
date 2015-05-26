@@ -27,7 +27,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="toSinglePlayer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xQd-V4-3hh"/>
-                                    <segue destination="jbe-gB-jyL" kind="presentation" id="Lcb-MG-RrI"/>
+                                    <segue destination="jbe-gB-jyL" kind="show" id="gpG-Qe-3WT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Big Bang Theroy: Rock, Paper, Lizard, Spock Game!!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8k-YJ-cbY">
@@ -50,7 +50,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="toLeaderboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hGy-kz-FWi"/>
-                                    <segue destination="yMQ-vw-r0S" kind="presentation" id="KFB-2s-eHq"/>
+                                    <segue destination="yMQ-vw-r0S" kind="show" id="KFB-2s-eHq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who are you player?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHa-VA-p7J">
@@ -94,6 +94,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ieh-g5-ans"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M7S-tT-dLw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BmO-6h-WX0">
@@ -140,16 +141,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-lQ-7Bg">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="146" width="400" height="162"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="jbe-gB-jyL" id="hZ6-EJ-VGC"/>
-                                    <outlet property="delegate" destination="jbe-gB-jyL" id="Pkz-zm-nSS"/>
-                                </connections>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single player arena: What do you choose" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gha-Ep-N3r">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -181,25 +172,35 @@
                                     <rect key="frame" x="177" y="514" width="46" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="6lZ-rK-Z5l"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="Ha1-zN-65Q"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-lQ-7Bg">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="130" width="400" height="162"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="jbe-gB-jyL" id="hZ6-EJ-VGC"/>
+                                    <outlet property="delegate" destination="jbe-gB-jyL" id="Pkz-zm-nSS"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="fjM-lQ-7Bg"/>
                                 <exclude reference="gha-Ep-N3r"/>
                                 <exclude reference="kDB-KR-Htw"/>
                                 <exclude reference="uvT-q3-6NK"/>
+                                <exclude reference="fjM-lQ-7Bg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="fjM-lQ-7Bg"/>
                                 <include reference="gha-Ep-N3r"/>
                                 <include reference="kDB-KR-Htw"/>
                                 <include reference="uvT-q3-6NK"/>
+                                <include reference="fjM-lQ-7Bg"/>
                             </mask>
                         </variation>
                     </view>

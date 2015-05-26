@@ -13,6 +13,9 @@ class SinglePlayerViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var picker: UIPickerView!
     var pickArray: [String] = ["Rock", "Paper", "Sizzors", "Lizard", "Spock"]
     
+    var alertView = UIAlertView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
@@ -46,7 +49,38 @@ class SinglePlayerViewController: UIViewController, UIPickerViewDataSource, UIPi
     }
     
     @IBAction func playButton(sender: UIButton) {
-        
+       var pick = picker.selectedRowInComponent(0)
+        GameHub.Constants.userChoice = pick
+        GameHub().compares()
+        switch (GameHub.Constants.RESULT){
+            case GameHub.Constants.WIN:
+                print("win")
+                GameHub.Constants.win = GameHub.Constants.win + 1
+                alertView.title = "Winner"
+                alertView.message = "There will be steak for tea!"
+                alertView.addButtonWithTitle("Next!")
+                alertView.show();
+            
+            
+            case GameHub.Constants.LOSS:
+                print("loss")
+                GameHub.Constants.loss = GameHub.Constants.loss + 1
+                alertView.title = "Looser"
+                alertView.message = "No fruit for YOU!!!"
+                alertView.addButtonWithTitle("Next!")
+                alertView.show();
+            
+            
+            case GameHub.Constants.TIE:
+                GameHub.Constants.tie = GameHub.Constants.tie + 1
+                alertView.title = "Tie"
+                alertView.message = "Meh whatever man"
+                alertView.addButtonWithTitle("Next!")
+                alertView.show();
+            
+            default:
+                break
+        }
         
     }
     

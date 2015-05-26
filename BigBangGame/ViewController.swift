@@ -44,8 +44,11 @@ class ViewController: UIViewController {
         
         
         var name = playerText.text
+        GameHub.Constants.playerName = playerText.text
         
         player.setValue(name, forKey: "name")
+        
+        
 
         
     }

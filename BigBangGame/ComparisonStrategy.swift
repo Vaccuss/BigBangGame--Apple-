@@ -10,6 +10,7 @@ import Foundation
 
 protocol ComparisonStrategy {
     func compare(otPlayer: Int)->Int
+    
 }
 
 class RockComparisonStrategy: ComparisonStrategy {

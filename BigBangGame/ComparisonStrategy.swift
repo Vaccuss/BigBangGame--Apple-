@@ -8,15 +8,106 @@
 
 import Foundation
 
-protocol ComparisonStrategy: Interface {
-    func compare(otPlayer)
+protocol ComparisonStrategy {
+    func compare(otPlayer: Int)->Int
 }
 
 class RockComparisonStrategy: ComparisonStrategy {
-    
-    func func compare(_: otPlayer) -> Int {
-        switch (selected):
-        
+  
+    func compare(otPlayer: Int) -> Int {
+        switch (otPlayer) {
+        case GameHub.Constants.ROCK:
+            return GameHub.Constants.TIE
+            
+        case GameHub.Constants.SICSSOR:
+            return GameHub.Constants.WIN
+            
+        case GameHub.Constants.LIZARD:
+            return GameHub.Constants.WIN
+            
+        default:
+            return GameHub.Constants.LOSS;
+
+        }
     }
+}
+
+class PaperComparisonStrategy: ComparisonStrategy {
     
+    func compare(otPlayer: Int) -> Int {
+        switch (otPlayer) {
+        case GameHub.Constants.PAPER:
+            return GameHub.Constants.TIE
+            
+        case GameHub.Constants.ROCK:
+            return GameHub.Constants.WIN
+            
+        case GameHub.Constants.SPOCK:
+            return GameHub.Constants.WIN
+            
+        default:
+            return GameHub.Constants.LOSS;
+            
+        }
+    }
+}
+
+class SicssorsComparisonStrategy: ComparisonStrategy {
+    
+    func compare(otPlayer: Int) -> Int {
+        switch (otPlayer) {
+        case GameHub.Constants.SICSSOR:
+            return GameHub.Constants.TIE
+            
+        case GameHub.Constants.PAPER:
+            return GameHub.Constants.WIN
+            
+        case GameHub.Constants.LIZARD:
+            return GameHub.Constants.WIN
+            
+        default:
+            return GameHub.Constants.LOSS;
+            
+        }
+    }
+}
+
+class LizardComparisonStrategy: ComparisonStrategy {
+    
+    func compare(otPlayer: Int) -> Int {
+        switch (otPlayer) {
+        case GameHub.Constants.LIZARD:
+            return GameHub.Constants.TIE
+            
+        case GameHub.Constants.SPOCK:
+            return GameHub.Constants.WIN
+            
+        case GameHub.Constants.PAPER:
+            return GameHub.Constants.WIN
+            
+        default:
+            return GameHub.Constants.LOSS;
+            
+        }
+    }
+}
+
+class SpockComparisonStrategy: ComparisonStrategy {
+    
+    func compare(otPlayer: Int) -> Int {
+        switch (otPlayer) {
+        case GameHub.Constants.SPOCK:
+            return GameHub.Constants.TIE
+            
+        case GameHub.Constants.SICSSOR:
+            return GameHub.Constants.WIN
+            
+        case GameHub.Constants.ROCK:
+            return GameHub.Constants.WIN
+            
+        default:
+            return GameHub.Constants.LOSS;
+            
+        }
+    }
 }

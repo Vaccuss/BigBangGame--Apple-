@@ -6,36 +6,46 @@
 //  Copyright (c) 2015 Dean Ditton. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class GameHub: NSObject {
     
-    static let sharedInstance = GameHub()
+    struct Constants{
+        public static var playerName = ""
+        public static var win: Int
+        public static var loss: Int
+        public static var tie: Int
+        
+        static let NO_SELECTION = 0
+        static let ROCK = 1
+        static let PAPER = 2
+        static let SICSSOR = 3
+        static let LIZARD = 4
+        static let SPOCK = 5
+        
+        static let TIE = 0
+        static let WIN = 1
+        static let LOSS = 2
+        
+        static let LOWESTNUM = 1
+        static let HIGHESTNUM = 5
+        
+        public static var statergy =  RockComparisonStrategy()
+        public static var userChoice = NO_SELECTION
+       
+    }
     
+    class var sharedInstance: GameHub {
+        struct Static {
+            static let instance: GameHub = GameHub()
+        }
+        return Static.instance
+    }
     
-    init(){
-        static var playerName: String
-        var win: Int
-        var loss: Int
-        var tie: Int
+    //class let sharedInstance = GameHub()
+
+    override init(){
         
-        let NO_SELECTION = 0
-        let ROCK = 1
-        let PAPER = 2
-        let SICSSOR = 3
-        let LIZARD = 4
-        let SPOCK = 5
-        
-        let TIE = 0
-        let WIN = 1
-        let LOSS = 2
-        
-        let LOWESTNUM = 1
-        let HIGHESTNUM = 5
-        
-        var statergy: ComparisonStrategy
-        
-        var userChoice = NO_SELECTION
     }
     
     

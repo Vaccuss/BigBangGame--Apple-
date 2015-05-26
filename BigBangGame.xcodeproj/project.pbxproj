@@ -14,6 +14,7 @@
 		1FA95A461B142E9000D0F0D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA95A451B142E9000D0F0D5 /* Images.xcassets */; };
 		1FA95A491B142E9000D0F0D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA95A471B142E9000D0F0D5 /* LaunchScreen.xib */; };
 		1FA95A551B142E9100D0F0D5 /* BigBangGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA95A541B142E9100D0F0D5 /* BigBangGameTests.swift */; };
+		1FA95A5F1B1431E200D0F0D5 /* SinglePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA95A5E1B1431E200D0F0D5 /* SinglePlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1FA95A4E1B142E9000D0F0D5 /* BigBangGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigBangGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA95A531B142E9100D0F0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA95A541B142E9100D0F0D5 /* BigBangGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBangGameTests.swift; sourceTree = "<group>"; };
+		1FA95A5E1B1431E200D0F0D5 /* SinglePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		1FA95A381B142E9000D0F0D5 /* BigBangGame */ = {
 			isa = PBXGroup;
 			children = (
+				1FA95A5E1B1431E200D0F0D5 /* SinglePlayerViewController.swift */,
 				1FA95A3B1B142E9000D0F0D5 /* AppDelegate.swift */,
 				1FA95A401B142E9000D0F0D5 /* ViewController.swift */,
 				1FA95A421B142E9000D0F0D5 /* Main.storyboard */,
@@ -217,6 +220,7 @@
 			files = (
 				1FA95A411B142E9000D0F0D5 /* ViewController.swift in Sources */,
 				1FA95A3F1B142E9000D0F0D5 /* BigBangGame.xcdatamodeld in Sources */,
+				1FA95A5F1B1431E200D0F0D5 /* SinglePlayerViewController.swift in Sources */,
 				1FA95A3C1B142E9000D0F0D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

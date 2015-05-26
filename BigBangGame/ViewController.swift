@@ -20,6 +20,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func toSinglePlayer(sender: UIButton) {
+        //Go to sigle player
+        
+        
+        
+        
+    }
 
+    @IBAction func toLeaderboard(sender: UIButton) {
+        //to leaderboard
+    }
 }
 

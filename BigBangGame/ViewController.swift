@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var playerText: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,11 +27,29 @@ class ViewController: UIViewController {
     @IBAction func toSinglePlayer(sender: UIButton) {
         //Go to sigle player
         
-        
-        
+    
         
     }
 
+    
+    //may not use storing code
+    @IBAction func savePlayerToCoreData(sender: UITextField) {
+        let appDeligate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDeligate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: managedContext!)
+        
+        let player = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        
+        var name = playerText.text
+        
+        player.setValue(name, forKey: "name")
+
+        
+    }
+    
     @IBAction func toLeaderboard(sender: UIButton) {
         //to leaderboard
     }

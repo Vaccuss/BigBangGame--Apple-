@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BA1E8650-B7F6-40BD-AEA6-50DDF3BC8466</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BigBangGame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>53D6F595A4D84498427F917E43F3A2CA7395CE4D</key>
+		<string>https://github.com/Vaccuss/BigBangGame--Apple-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BigBangGame.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>53D6F595A4D84498427F917E43F3A2CA7395CE4D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Vaccuss/BigBangGame--Apple-.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>53D6F595A4D84498427F917E43F3A2CA7395CE4D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>53D6F595A4D84498427F917E43F3A2CA7395CE4D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BigBangGame</string>
+		</dict>
+	</array>
+</dict>
+</plist>

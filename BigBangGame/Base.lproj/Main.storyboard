@@ -50,7 +50,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="toLeaderboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hGy-kz-FWi"/>
-                                    <segue destination="oER-ts-VcF" kind="presentation" id="IWs-et-0gF"/>
+                                    <segue destination="yMQ-vw-r0S" kind="presentation" id="KFB-2s-eHq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who are you player?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHa-VA-p7J">
@@ -60,6 +60,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="86" y="170" width="229" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="savePlayerToCoreData:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="0Mr-MR-tdP"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,35 +77,56 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="playerText" destination="UHa-VA-p7J" id="gqC-vl-alX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139.5" y="136"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="KAF-lw-bkF">
+        <!--Leaderboard View Controller-->
+        <scene sceneID="3FI-Zw-bjg">
             <objects>
-                <tableViewController id="oER-ts-VcF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="o1G-zC-5nh">
+                <viewController id="yMQ-vw-r0S" customClass="LeaderboardViewController" customModule="BigBangGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VMv-uS-u8x"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ieh-g5-ans"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M7S-tT-dLw">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BmO-6h-WX0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="yMQ-vw-r0S" id="SZR-8F-XAK"/>
+                                    <outlet property="delegate" destination="yMQ-vw-r0S" id="KDl-dJ-ncD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uNO-mc-0ka">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uNO-mc-0ka" id="LXf-WJ-Gzm">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="oER-ts-VcF" id="TOt-BX-YmD"/>
-                            <outlet property="delegate" destination="oER-ts-VcF" id="cm4-Zl-JcV"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N12-ko-ZGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BmO-6h-WX0"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="BmO-6h-WX0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="leaderboardView" destination="BmO-6h-WX0" id="sbY-ul-TBQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aN6-Wi-izX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.5" y="869"/>
+            <point key="canvasLocation" x="139.5" y="852"/>
         </scene>
         <!--Single Player View Controller-->
         <scene sceneID="CGc-UJ-x4l">
@@ -113,6 +137,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HQi-Jm-NjY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7gh-p0-ed4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-lQ-7Bg">

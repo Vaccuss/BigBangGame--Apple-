@@ -57,7 +57,7 @@
                   symbolName = "BigBangGame.LeaderboardViewController.leaderboardView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITableView&gt;"
                   moduleName = "BigBangGame"
                   urlString = "file:///Users/jc221633/Desktop/BigBangGame/BigBangGame/LeaderboardViewController.swift"
-                  timestampString = "454323364.193177"
+                  timestampString = "454324522.40936"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -71,7 +71,7 @@
                   symbolName = "BigBangGame.LeaderboardViewController.leaderboardView.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITableView&gt;"
                   moduleName = "BigBangGame"
                   urlString = "file:///Users/jc221633/Desktop/BigBangGame/BigBangGame/LeaderboardViewController.swift"
-                  timestampString = "454323364.193331"
+                  timestampString = "454324522.409469"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -85,7 +85,7 @@
                   symbolName = "BigBangGame.LeaderboardViewController.init (BigBangGame.LeaderboardViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; BigBangGame.LeaderboardViewController"
                   moduleName = "BigBangGame"
                   urlString = "file:///Users/jc221633/Desktop/BigBangGame/BigBangGame/LeaderboardViewController.swift"
-                  timestampString = "454323364.193473"
+                  timestampString = "454324522.409574"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -99,7 +99,7 @@
                   symbolName = "BigBangGame.LeaderboardViewController.init (BigBangGame.LeaderboardViewController.Type)() -&gt; BigBangGame.LeaderboardViewController"
                   moduleName = "BigBangGame"
                   urlString = "file:///Users/jc221633/Desktop/BigBangGame/BigBangGame/LeaderboardViewController.swift"
-                  timestampString = "454323364.193598"
+                  timestampString = "454324522.409683"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -113,7 +113,7 @@
                   symbolName = "BigBangGame.LeaderboardViewController.init (BigBangGame.LeaderboardViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; BigBangGame.LeaderboardViewController"
                   moduleName = "BigBangGame"
                   urlString = "file:///Users/jc221633/Desktop/BigBangGame/BigBangGame/LeaderboardViewController.swift"
-                  timestampString = "454323364.193745"
+                  timestampString = "454324522.409788"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -130,11 +130,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BigBangGame/GameHub.swift"
-            timestampString = "454323363.861524"
+            timestampString = "454324522.126968"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57">
+            startingLineNumber = "56"
+            endingLineNumber = "56">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -174,11 +174,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BigBangGame/GameHub.swift"
-            timestampString = "454323442.570287"
+            timestampString = "454324522.126968"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "Constants"
             landmarkType = "3">
          </BreakpointContent>
@@ -186,7 +186,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BigBangGame/GameHub.swift"
@@ -197,6 +197,36 @@
             endingLineNumber = "33"
             landmarkName = "Constants"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_func15"
+                  moduleName = "BigBangGame"
+                  urlString = "file:///Users/jc221633/Desktop/BigBangGame/BigBangGame/GameHub.swift"
+                  timestampString = "454324522.411243"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BigBangGame.GameHub.Constants.statergy.mutableAddressor : BigBangGame.RockComparisonStrategy"
+                  moduleName = "BigBangGame"
+                  urlString = "file:///Users/jc221633/Desktop/BigBangGame/BigBangGame/GameHub.swift"
+                  timestampString = "454324522.411397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

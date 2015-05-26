@@ -11,10 +11,10 @@ import UIKit
 class GameHub: NSObject {
     
     struct Constants{
-        public static var playerName = ""
-        public static var win: Int
-        public static var loss: Int
-        public static var tie: Int
+        internal static var playerName = ""
+      internal var win  = 0
+        internal static var loss = 0
+        internal static var tie = 0
         
         static let NO_SELECTION = 0
         static let ROCK = 1
@@ -30,8 +30,8 @@ class GameHub: NSObject {
         static let LOWESTNUM = 1
         static let HIGHESTNUM = 5
         
-        public static var statergy =  RockComparisonStrategy()
-        public static var userChoice = NO_SELECTION
+        internal static var statergy =  RockComparisonStrategy()
+        internal static var userChoice = NO_SELECTION
        
     }
     

@@ -7,19 +7,32 @@
 //
 
 import UIKit
+import CoreData
+
 
 class SinglePlayerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+    
+    
+    @IBOutlet weak var TilePage: UILabel!
+    
     @IBOutlet weak var picker: UIPickerView!
     var pickArray: [String] = ["Rock", "Paper", "Sizzors", "Lizard", "Spock"]
+    
+    var playerName = GameHub.Constants.playerName
+   
     
     var alertView = UIAlertView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TilePage.text = playerName + " get ready to battle"
         picker.delegate = self
         picker.dataSource = self
+        
+        
         
         // Do any additional setup after loading the view.
     }
@@ -83,5 +96,41 @@ class SinglePlayerViewController: UIViewController, UIPickerViewDataSource, UIPi
         }
         
     }
+    
+    @IBAction func BackButton(sender: AnyObject) {
+        let player = NSEntityDescription.insertNewObjectForEntityForName("Player", inManagedObjectContext: self.managedObjectContext!) as Player;
+        
+        var total = GameHub.Constants.loss + GameHub.Constants.win
+        var win = GameHub.Constants.win
+        var result: Float = Float(win) / Float(total)
+        player.name = GameHub.Constants.playerName
+        player.wins = GameHub.Constants.win
+        player.losses = GameHub.Constants.loss
+        player.total = total
+        if GameHub.Constants.win > 0{
+            player.ratio = result
+        }else{
+            player.ratio = 0.0
+        }
+       
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

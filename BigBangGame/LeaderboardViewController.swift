@@ -12,7 +12,9 @@ import CoreData
 class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet weak var leaderboardView: UITableView!
+    
     var players = [NSManagedObject]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

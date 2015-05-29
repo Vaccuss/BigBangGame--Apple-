@@ -18,6 +18,7 @@
 		1FA95A651B144B8900D0F0D5 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA95A641B144B8900D0F0D5 /* LeaderboardViewController.swift */; };
 		1FA95A6B1B1463CD00D0F0D5 /* GameHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA95A6A1B1463CD00D0F0D5 /* GameHub.swift */; };
 		1FA95A6D1B14677600D0F0D5 /* ComparisonStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA95A6C1B14677600D0F0D5 /* ComparisonStrategy.swift */; };
+		1FB7DF901B1842AF001856F4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7DF8F1B1842AF001856F4 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1FA95A641B144B8900D0F0D5 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		1FA95A6A1B1463CD00D0F0D5 /* GameHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHub.swift; sourceTree = "<group>"; };
 		1FA95A6C1B14677600D0F0D5 /* ComparisonStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonStrategy.swift; sourceTree = "<group>"; };
+		1FB7DF8F1B1842AF001856F4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				1FA95A451B142E9000D0F0D5 /* Images.xcassets */,
 				1FA95A471B142E9000D0F0D5 /* LaunchScreen.xib */,
 				1FA95A3D1B142E9000D0F0D5 /* BigBangGame.xcdatamodeld */,
+				1FB7DF8F1B1842AF001856F4 /* Player.swift */,
 				1FA95A391B142E9000D0F0D5 /* Supporting Files */,
 			);
 			path = BigBangGame;
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB7DF901B1842AF001856F4 /* Player.swift in Sources */,
 				1FA95A411B142E9000D0F0D5 /* ViewController.swift in Sources */,
 				1FA95A3F1B142E9000D0F0D5 /* BigBangGame.xcdatamodeld in Sources */,
 				1FA95A651B144B8900D0F0D5 /* LeaderboardViewController.swift in Sources */,
@@ -425,6 +429,7 @@
 				1FA95A5A1B142E9100D0F0D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FA95A5B1B142E9100D0F0D5 /* Build configuration list for PBXNativeTarget "BigBangGameTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +438,7 @@
 				1FA95A5D1B142E9100D0F0D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

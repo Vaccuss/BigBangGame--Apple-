@@ -12,11 +12,16 @@ import CoreData
 class ViewController: UIViewController {
 
     @IBOutlet weak var playerText: UITextField!
+    @IBOutlet weak var buttonName: UIButton!
     
+    @IBOutlet weak var welcometext: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       var name = GameHub.Constants.playerName
+        welcometext.text = "You ready " + name + "?"
+        playerText.text = name
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,10 +30,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func toSinglePlayer(sender: UIButton) {
-        //Go to sigle player
-        
+        //Go to sigle player and set suff up
+        SetPlayerName(UIButton)
+        buttonName.setTitle("Change name", forState: UIControlState.Normal)
+    }
+    @IBAction func SetPlayerName(sender: AnyObject) {
+        var name = playerText.text
+        GameHub.Constants.playerName = playerText.text
+        welcometext.text = "You ready " + name + "?"
+        buttonName.setTitle("Change name", forState: UIControlState.Normal)
     
-        
     }
 
     
@@ -44,7 +55,7 @@ class ViewController: UIViewController {
         
         
         var name = playerText.text
-        GameHub.Constants.playerName = playerText.text
+        
         
         player.setValue(name, forKey: "name")
         

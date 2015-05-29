@@ -30,15 +30,6 @@
                                     <segue destination="jbe-gB-jyL" kind="show" id="gpG-Qe-3WT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Big Bang Theroy: Rock, Paper, Lizard, Spock Game!!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8k-YJ-cbY">
-                                <rect key="frame" x="30" y="28" width="540" height="65"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-6" y="28" width="400" height="65"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33w-gP-5py">
                                 <rect key="frame" x="256" y="205" width="88" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -58,27 +49,63 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="86" y="170" width="229" height="30"/>
+                                    <rect key="frame" x="109" y="171" width="229" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="savePlayerToCoreData:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="0Mr-MR-tdP"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVr-00-ciX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Set Name">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="5" y="171" width="104" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="SetPlayerName:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PEn-r0-VT2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-vA-MU1">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="5" y="111" width="391" height="33"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Big Bang Theroy: Rock, Paper, Lizard, Spock Game!!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8k-YJ-cbY">
+                                <rect key="frame" x="30" y="28" width="540" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="28" width="351" height="65"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="UHa-VA-p7J"/>
+                                <exclude reference="FVr-00-ciX"/>
+                                <exclude reference="DBS-vA-MU1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="UHa-VA-p7J"/>
+                                <include reference="FVr-00-ciX"/>
+                                <include reference="DBS-vA-MU1"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="buttonName" destination="FVr-00-ciX" id="DAE-5f-7yf"/>
                         <outlet property="playerText" destination="UHa-VA-p7J" id="gqC-vl-alX"/>
+                        <outlet property="welcometext" destination="DBS-vA-MU1" id="S5s-71-fxE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -101,23 +128,49 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                    <rect key="frame" x="0.0" y="61" width="400" height="496"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="yMQ-vw-r0S" id="SZR-8F-XAK"/>
                                     <outlet property="delegate" destination="yMQ-vw-r0S" id="KDl-dJ-ncD"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O1-7p-d7q">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="172" y="550" width="56" height="42"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="FQU-S1-Ifb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leaderboard: See where you stand" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5r-wq-sSK">
+                                <rect key="frame" x="166" y="20" width="269" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="18" width="368" height="35"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="BmO-6h-WX0"/>
+                                <exclude reference="9O1-7p-d7q"/>
+                                <exclude reference="h5r-wq-sSK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="BmO-6h-WX0"/>
+                                <include reference="9O1-7p-d7q"/>
+                                <include reference="h5r-wq-sSK"/>
                             </mask>
                         </variation>
                     </view>
@@ -127,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aN6-Wi-izX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.5" y="852"/>
+            <point key="canvasLocation" x="153" y="874"/>
         </scene>
         <!--Single Player View Controller-->
         <scene sceneID="CGc-UJ-x4l">
@@ -141,15 +194,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single player arena: What do you choose" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gha-Ep-N3r">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="12" y="45" width="377" height="26"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-KR-Htw">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -157,7 +201,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="174" y="351" width="52" height="34"/>
+                                    <rect key="frame" x="174" y="409" width="52" height="34"/>
                                 </variation>
                                 <connections>
                                     <action selector="playButton:" destination="jbe-gB-jyL" eventType="touchUpInside" id="dvs-iw-AcZ"/>
@@ -165,13 +209,15 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-q3-6NK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="514" width="46" height="30"/>
+                                    <rect key="frame" x="177" y="514" width="45" height="36"/>
                                 </variation>
                                 <connections>
+                                    <action selector="BackButton:" destination="jbe-gB-jyL" eventType="touchUpInside" id="UVF-oX-sne"/>
                                     <segue destination="vXZ-lx-hvc" kind="show" id="Ha1-zN-65Q"/>
                                 </connections>
                             </button>
@@ -185,26 +231,69 @@
                                     <outlet property="delegate" destination="jbe-gB-jyL" id="Pkz-zm-nSS"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get ready to battle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gha-Ep-N3r">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="28" width="374" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your weapon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyT-Vp-gAy">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="115" y="101" width="164" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fight when ready" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cN8-xz-iz6">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="134" y="380" width="132" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weakling button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOS-Pt-B53">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="490" width="124" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="gha-Ep-N3r"/>
                                 <exclude reference="kDB-KR-Htw"/>
                                 <exclude reference="uvT-q3-6NK"/>
                                 <exclude reference="fjM-lQ-7Bg"/>
+                                <exclude reference="gha-Ep-N3r"/>
+                                <exclude reference="SyT-Vp-gAy"/>
+                                <exclude reference="cN8-xz-iz6"/>
+                                <exclude reference="eOS-Pt-B53"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="gha-Ep-N3r"/>
                                 <include reference="kDB-KR-Htw"/>
                                 <include reference="uvT-q3-6NK"/>
                                 <include reference="fjM-lQ-7Bg"/>
+                                <include reference="gha-Ep-N3r"/>
+                                <include reference="SyT-Vp-gAy"/>
+                                <include reference="cN8-xz-iz6"/>
+                                <include reference="eOS-Pt-B53"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="TilePage" destination="gha-Ep-N3r" id="Apv-5Z-Hcp"/>
                         <outlet property="picker" destination="fjM-lQ-7Bg" id="rJt-Ci-iQJ"/>
                     </connections>
                 </viewController>
@@ -213,4 +302,7 @@
             <point key="canvasLocation" x="874.5" y="136"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ha1-zN-65Q"/>
+    </inferredMetricsTieBreakers>
 </document>

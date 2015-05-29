@@ -13,9 +13,8 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
 
     @IBOutlet weak var leaderboardView: UITableView!
     
-    var players = [NSManagedObject]()
-    
-    
+    var players = ["hello", "ye", "bob"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "\"Leaderboard\""

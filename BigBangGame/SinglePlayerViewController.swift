@@ -112,6 +112,9 @@ class SinglePlayerViewController: UIViewController, UIPickerViewDataSource, UIPi
         }else{
             player.ratio = 0.0
         }
+        GameHub.Constants.loss = 0
+        GameHub.Constants.tie = 0
+        GameHub.Constants.win = 0
        
     }
     

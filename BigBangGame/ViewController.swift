@@ -45,24 +45,7 @@ class ViewController: UIViewController {
     
     //may not use storing code
     @IBAction func savePlayerToCoreData(sender: UITextField) {
-        let appDeligate = UIApplication.sharedApplication().delegate as AppDelegate
-        
-        let managedContext = appDeligate.managedObjectContext
-        
-        let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: managedContext!)
-        
-        let player = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        
-        
-        var name = playerText.text
-        
-        
-        player.setValue(name, forKey: "name")
-        
-        
-
-        
-    }
+            }
     
     @IBAction func toLeaderboard(sender: UIButton) {
         //to leaderboard

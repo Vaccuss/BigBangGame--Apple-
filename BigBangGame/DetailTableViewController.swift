@@ -86,6 +86,7 @@ class DetailTableViewController: UITableViewController, UITableViewDataSource {
         }else{
             println("could not fetch results")
         }
+        
     
 }
 }

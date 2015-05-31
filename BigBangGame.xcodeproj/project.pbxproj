@@ -17,8 +17,8 @@
 		1FA95A5F1B1431E200D0F0D5 /* SinglePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA95A5E1B1431E200D0F0D5 /* SinglePlayerViewController.swift */; };
 		1FA95A6B1B1463CD00D0F0D5 /* GameHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA95A6A1B1463CD00D0F0D5 /* GameHub.swift */; };
 		1FA95A6D1B14677600D0F0D5 /* ComparisonStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA95A6C1B14677600D0F0D5 /* ComparisonStrategy.swift */; };
+		1FAF98121B1AB393006C0BA3 /* LeaderBoardmk4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF98111B1AB393006C0BA3 /* LeaderBoardmk4.swift */; };
 		1FB7DF901B1842AF001856F4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7DF8F1B1842AF001856F4 /* Player.swift */; };
-		1FB7DF941B184B2C001856F4 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7DF931B184B2C001856F4 /* Leaderboard.swift */; };
 		1FB7DF961B184BE8001856F4 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7DF951B184BE8001856F4 /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +47,8 @@
 		1FA95A5E1B1431E200D0F0D5 /* SinglePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePlayerViewController.swift; sourceTree = "<group>"; };
 		1FA95A6A1B1463CD00D0F0D5 /* GameHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHub.swift; sourceTree = "<group>"; };
 		1FA95A6C1B14677600D0F0D5 /* ComparisonStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonStrategy.swift; sourceTree = "<group>"; };
+		1FAF98111B1AB393006C0BA3 /* LeaderBoardmk4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardmk4.swift; sourceTree = "<group>"; };
 		1FB7DF8F1B1842AF001856F4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		1FB7DF931B184B2C001856F4 /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		1FB7DF951B184BE8001856F4 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,8 +101,8 @@
 				1FA95A471B142E9000D0F0D5 /* LaunchScreen.xib */,
 				1FA95A3D1B142E9000D0F0D5 /* BigBangGame.xcdatamodeld */,
 				1FB7DF8F1B1842AF001856F4 /* Player.swift */,
-				1FB7DF931B184B2C001856F4 /* Leaderboard.swift */,
 				1FB7DF951B184BE8001856F4 /* DetailTableViewController.swift */,
+				1FAF98111B1AB393006C0BA3 /* LeaderBoardmk4.swift */,
 				1FA95A391B142E9000D0F0D5 /* Supporting Files */,
 			);
 			path = BigBangGame;
@@ -237,10 +237,10 @@
 				1FA95A411B142E9000D0F0D5 /* ViewController.swift in Sources */,
 				1FA95A3F1B142E9000D0F0D5 /* BigBangGame.xcdatamodeld in Sources */,
 				1FB7DF961B184BE8001856F4 /* DetailTableViewController.swift in Sources */,
+				1FAF98121B1AB393006C0BA3 /* LeaderBoardmk4.swift in Sources */,
 				1FA95A5F1B1431E200D0F0D5 /* SinglePlayerViewController.swift in Sources */,
 				1FA95A3C1B142E9000D0F0D5 /* AppDelegate.swift in Sources */,
 				1FA95A6B1B1463CD00D0F0D5 /* GameHub.swift in Sources */,
-				1FB7DF941B184B2C001856F4 /* Leaderboard.swift in Sources */,
 				1FA95A6D1B14677600D0F0D5 /* ComparisonStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

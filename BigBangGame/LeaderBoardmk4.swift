@@ -63,6 +63,7 @@ class LeaderBoardmk4: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.sizeToFit()
         cell.textLabel?.text = "Rank: " + rank.stringValue + " " + name + " | " + " Wins: " + win.stringValue + " Losses: " + losses.stringValue + " Total:  " + total.stringValue
         cell.textLabel?.sizeToFit()
+        
         return cell
 
     }
